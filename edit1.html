@@ -1,0 +1,303 @@
+
+<html>
+<head>
+
+<script type="text/javascript">
+<!--  Begin
+
+function resetform()
+{
+document.forms[0].elements[1]=="";
+}
+
+function submitForms()
+{
+if (isFirstname() && isLastname() && isLoginid() && isPassword() && isAge() && isDateOfBirth() && isGender() && isAddress() && isMobileNumber1() && isMobileNumber2() && isBloodGroup() && isDisease() && isRegisteredDate())
+return true;
+else 
+return false;
+}
+
+
+
+function isFirstname()
+{
+if (document.forms[0].elements[0].value == "")
+{
+alert ("The Firstname field is blank. Please enter your Firstname.")
+document.forms[0].elements[0].focus();
+return false;
+}
+return true;
+}
+
+
+function isLastname()
+{
+if (document.forms[0].elements[1].value == "")
+{
+alert ("The Lastname field is blank. \n\nPlease enter your Lastname.")
+document.forms[0].elements[1].focus();
+return false;
+}
+return true;
+}
+
+function isLoginid()
+{
+var n=document.forms[0].elements[2].value;
+if (n == "")
+{
+alert ("The Loginid field is blank. \n\nPlease enter your Loginid.")
+document.forms[0].elements[2].focus();
+return false;
+}
+
+return true;
+}
+
+function isPassword()
+{
+if (document.forms[0].elements[3].value == "")
+{
+alert ("The Password field is blank. \n\nPlease enter your Password.")
+document.forms[0].elements[3].focus();
+return false;
+}
+return true;
+}
+
+function isAge()
+{
+var n=document.forms[0].elements[4].value;
+if ( n == "")
+{
+alert ("The Age field is blank. \n\nPlease enter your Age.")
+document.forms[0].elements[4].focus();
+return false;
+}
+else
+{
+if(isNaN(n) != false)
+{
+  alert("You must enter only numeric values for Age");
+document.forms[0].elements[4].focus();
+return false;
+}
+if(n<15 || n>100)
+{
+alert("Age should be between 15 to 100");
+document.forms[0].elements[4].focus();
+return false;
+
+}
+return true;
+}
+}
+
+function isDateOfBirth()
+{
+if (document.forms[0].elements[5].value == "")
+{
+alert ("The Date of birth field is blank. \n\nPlease enter your Date of birth.")
+document.forms[0].elements[5].focus();
+return false;
+}
+return true;
+}
+
+function isGender()
+{
+var d=document.forms[0].elements[6].value;
+if (d == "")
+{
+alert ("The  Gender field is blank. \n\nPlease select your Gender.")
+document.forms[0].elements[6].focus();
+return false;
+}
+return true;
+}
+
+
+function isAddress()
+{
+if (document.forms[0].elements[7].value == "")
+{
+alert ("The Address field is blank. Please enter your address.")
+document.forms[0].elements[7].focus();
+return false;
+}
+return true;
+}
+
+function isMobileNumber1()
+{
+var TT = document.forms[0].elements[8].value;
+if(TT == "")
+{
+alert("MobileNumber1 cannot be blank")
+document.forms[0].elements[8].focus();
+return false;                
+}
+
+else
+{
+if(TT.length<10)
+{
+alert("MobileNumber1 must contain 10 Numeric Values");
+document.forms[0].elements[8].focus();
+return false;  
+}
+if(TT.length>13)
+{
+alert("MobileNumber1 should not contain more than 13 Numeric Values");
+document.forms[0].elements[8].focus();
+return false;  
+}
+if(isNaN(TT) != false)
+{
+  alert("You must enter only numeric values for Mobilenumber1");
+document.forms[0].elements[8].focus();
+return false;
+}
+return true;
+}
+}
+
+function isMobileNumber2()
+{
+var TTT = document.forms[0].elements[9].value;
+
+
+if(TTT.length>13)
+{
+alert("MobileNumber2 should not contain more than 13 Numeric Values");
+document.forms[0].elements[9].focus();
+return false;  
+}
+if(isNaN(TTT) != false)
+{
+  alert("You must enter only numeric values for Mobilenumber2");
+document.forms[0].elements[9].focus();
+return false;
+}
+
+return true;
+}
+
+
+
+
+function isBloodGroup()
+{
+if (document.forms[0].elements[10].value == "")
+{
+alert ("The Bloodgroup field is blank. \n\nPlease enter your Bloodgroup.")
+document.forms[0].elements[10].focus();
+return false;
+}
+return true;
+}
+
+function isDisease()
+{
+var A = document.forms[0].elements[11].value;
+return true;
+}
+
+
+function isRegisteredDate()
+{
+if (document.forms[0].elements[13].value == "")
+{
+alert ("The Registered Date field is blank. \n\nPlease enter Registered Date.")
+document.forms[0].elements[13].focus();
+return false;
+}
+return true;
+}
+
+// End -->
+</script>
+<link rel="stylesheet" href="home.css" type="text/css">
+</head>
+<body>
+<center>
+
+        <form name="formRegister" method="post" action="edit1.php" onSubmit="return submitForms()">
+        <h1 align="center">UPDATING NEEDER'S INFORMATION</h1><br>
+        
+              
+              <table width="580" border="0">
+                <tr>
+                
+                  <td><font size="5">Firstname</font></td>
+                  <td><b><input type="text" size="44" name="Firstname" ></b></td>
+                </tr>
+                <tr>
+                  <td><font size="5">Lastname</font></td>
+                  <td><b><input type="text" size="44" name="Lastname" ></b></td>
+                </tr>
+                <tr>            
+                  <td><font size="5">Loginid</font></td>
+                  <td><b><input type="text" size="44" name="loginid" ></b></td>
+                </tr>
+                <tr>            
+                  <td><font size="5">Password</font></td>
+                  <td><b><input type="password" size="44" name="password" ></b></td>
+                </tr>
+                <tr>
+                  <td><font size="5">Age</font></td>
+                  <td><b><input type="text" size="44" name="Age" ></b></td>
+                </tr>
+                
+                <tr>
+                  <td><font size="5">Gender</font></td>
+                  <td><b><input type="text" name="Gender" size="43" ></b></td>
+                </tr>
+               
+                <tr>
+                  <td><font size="5">Address</font></td>
+                  <td><b><textarea cols="33" rows="3" name="Address" ></textarea></b></td>
+                </tr>
+                <tr>
+                  <td><font size="5">MobileNumber1</font></td>
+                  <td><b><input type="text"  name="Mobilenumber1" size="44" ></b></td>
+                </tr>
+                 <tr>
+                  <td><font size="5">MobileNumber2</font></td>
+                  <td><b><input type="text"  name="Mobilenumber2" size="44" ></b></td>
+             
+                </tr>
+                 <tr>
+                  <td><font size="5">BloodGroup</font></td>
+                  <td><b><input type="text"  name="Bloodgroup" size="44" ></b></td>
+             
+                   </tr>
+                 <tr>
+                  <td><font size="5">Disease</font></td>
+                  <td><b><input type="text"  name="Disease" size="44" ></b></td>
+             
+                    </tr>
+                 
+                 
+</table>
+                         
+
+<table width="580" align="center" border="0">
+               <tr>
+            <td align="center" width="200"><input type="submit" name="Submit" value="Submit"></td>
+            <td align="center" width="200"><input type="reset" name="reset" value="Reset Form" onClick="return confirm('Are you sure you want to clear the current information?');"></td>
+          </tr>
+           </table>
+
+      </form>
+	  
+ 
+          
+</center>
+<form action="hd.php" method="get">
+<input type="submit" value="BACK"/></form>
+</body>
+</html>
+		

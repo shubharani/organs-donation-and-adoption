@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="s1.css">
+<script type="text/javascript">
+function validateForm()
+{
+var x=document.forms["form"]["loginid"].value;
+if (x==null || x=="")
+  {
+  alert("Login Id is empty");
+  return false;
+  }
+var y=document.forms["form"]["password"].value;
+if (y==null || y=="")
+  {
+  alert("Password is empty");
+  return false;
+  }
+}
+
+</script>
+
+	<title>lg</title>
+</head>
+<body>
+<center>
+
+<table>
+   
+   	  
+   	  <form id="form" method="post" action="ad.php" onSubmit="return validateForm()">
+  	
+  	<tr><h2 class="fo">ADMIN VEIW <br>BLOOD BANK MANAGEMENT SYSTEM</h2>
+        <td>LOGIN ID:</td>
+  	<td><input type="text" name="loginid"></td></tr><br><br><br>
+  	<tr><td>PASSWORD:</td>
+  	<td><input type="password" name="password"></td></tr></center>
+  </table>
+  
+   	<br><br>
+
+   	  <input class="re" type="Submit" name="Submit" value="Submit"/>
+      <input class="re" type="reset" name="reset" value="Reset"/>
+
+
+      
+   
+</form>
+
+</body>
+</html>
